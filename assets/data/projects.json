@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "Luxe Café De Markt",
+      "description": "Een stijlvolle website voor een luxe café, inclusief menu, team en contactpagina. Gemaakt met HTML en CSS.",
+      "url": "projects/cafe/cafe.html",
+      "image": "assets/images/cafe-thumbnail.jpg"
+    },
+    {
+      "title": "Hero's",
+      "description": "Een verzameling creatieve hero-pagina's met Bootstrap navigatie en muziek.",
+      "url": "projects/heros/heros.html",
+      "image": "assets/images/heros-thumbnail.jpg"
+    }
+  ]
+}
