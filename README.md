@@ -5,7 +5,6 @@ This portfolio showcases the work and skills of Kay Neggers, a passionate develo
 
 ## Project Structure
 The project is organized as follows:
-
 ```
 kay-neggers-portfolio
 ├── index.html          # Main homepage of the portfolio
