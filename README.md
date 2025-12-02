@@ -1,14 +1,15 @@
 # Kay Neggers Portfolio
 
 ## Overview
-This portfolio showcases the work and skills of Kay Neggers, a passionate developer with a focus on technology and innovation. The website includes various projects, an about section, and contact information.
+Deze portfolio presenteert een selectie van mijn webprojecten en vaardigheden. Elk project toont technische keuzes, responsive design en aandacht voor toegankelijkheid en performance. De site fungeert als een actueel overzicht van behaalde resultaten en leerdoelen.
+
 
 ## Project Structure
 The project is organized as follows:
 ```
 kay-neggers-portfolio
 ├── index.html          # Main homepage of the portfolio
-├── about.html          # Information about Kay Neggers
+├──overmij.html          # Information about Kay Neggers
 ├── projects            # Directory containing project details
 │   ├── cafe
 │   │   └── cafe.html   # Details about the Luxe Café De Markt project
