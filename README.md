@@ -9,7 +9,7 @@ The project is organized as follows:
 ```
 kay-neggers-portfolio
 ├── index.html          # Main homepage of the portfolio
-├──overmij.html          # Information about Kay Neggers
+├── about.html          # Information about Kay Neggers
 ├── projects            # Directory containing project details
 │   ├── cafe
 │   │   └── cafe.html   # Details about the Luxe Café De Markt project

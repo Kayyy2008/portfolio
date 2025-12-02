@@ -4,38 +4,197 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Over Mij | Kay Neggers</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Meer over Kay Neggers: vaardigheden, achtergrond en contactinformatie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2em auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60,60,120,0.10);
+      padding: 2em 2.5em;
+    }
+    header {
+      background: #1a2238;
+      color: #fff;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 4px 16px rgba(30,30,60,0.10);
+      margin-bottom: 2em;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5em 2.5em;
+    }
+    .header-container h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5em;
+    }
+    nav ul li, nav ul a {
+      display: inline;
+    }
+    nav a {
+      color: #f4db7d;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #e94560;
+    }
+    .intro {
+      display: flex;
+      gap: 2em;
+      align-items: flex-start;
+    }
+    .intro img.inline-img {
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(60,60,120,0.12);
+      border: 4px solid #f4db7d;
+      margin-bottom: 1em;
+      max-width: 240px;
+    }
+    .intro h2 {
+      margin-top: 0;
+      color: #e94560;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      padding: 0;
+      margin: 1em 0 0 0;
+      list-style: none;
+    }
+    .skills-list li {
+      background: #f4db7d;
+      color: #1a2238;
+      border-radius: 12px;
+      padding: 1em 1.5em;
+      box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+      font-size: 1.1rem;
+      min-width: 220px;
+      flex: 1 1 220px;
+    }
+    #contact {
+      background: #e0e7ef;
+      border-radius: 14px;
+      padding: 1.5em 2em;
+      margin-top: 2em;
+      box-shadow: 0 2px 8px rgba(60,60,120,0.06);
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0 0;
+    }
+    .contact-list a {
+      color: #e94560;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #1a2238;
+      color: #f4db7d;
+      text-align: center;
+      padding: 1.2em 0;
+      border-radius: 18px 18px 0 0;
+      margin-top: 3em;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 12px rgba(30,30,60,0.08);
+    }
+    @media (max-width: 700px) {
+      .container, .header-container {
+        padding: 1em;
+      }
+      .intro {
+        flex-direction: column;
+        gap: 1em;
+      }
+      .skills-list {
+        flex-direction: column;
+        gap: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <h1>Kay Neggers</h1>
+      <h1>Over Mij</h1>
       <nav aria-label="Hoofdnavigatie">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over Mij</a></li>
+          <li><a href="overmij.html">Over Mij</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="container">
-      <h2>Over Mij</h2>
-      <p>
-        Mijn naam is <strong>Kay Neggers</strong> en ik ben een gepassioneerde developer met ervaring in webontwikkeling. Ik heb een sterke achtergrond in HTML, CSS en JavaScript, en ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden om mijn vaardigheden te verbeteren.
-      </p>
-      <h3>Vaardigheden</h3>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Responsive Design</li>
-        <li>Webontwikkeling met frameworks zoals Bootstrap</li>
+    <section id="introductie" class="container">
+      <div class="intro">
+        <img src="https://gameninfo.nl/wp-content/uploads/2020/04/effecten-gamen-verslaving.jpg" alt="Profielfoto van Kay Neggers" class="inline-img" style="float:right;">
+        <div>
+          <h2>Wie ben ik?</h2>
+          <p>
+            Hoi! Ik ben <strong>Kay Neggers</strong>, een enthousiaste student aan Vonk Schagen.<br>
+            Al van jongs af aan ben ik nieuwsgierig en leergierig. Ik vind het leuk om mezelf uit te dagen met nieuwe projecten, zowel op school als in mijn vrije tijd. Mijn vrienden en familie omschrijven mij als sociaal, vriendelijk en behulpzaam. Ik ben altijd in voor een goed gesprek of een gezellige avond samen.<br><br>
+            In mijn vrije tijd game ik graag, kijk ik Formule 1 en spreek ik af met vrienden. Sport en ontspanning zijn voor mij belangrijk om een goede balans te houden. Daarnaast houd ik ervan om naar muziek te luisteren en een film te kijken.<br>
+            <img src="https://f1saopaulo.com.br/wp-content/uploads/2024/01/Sem-Titulo-1-1.png" alt="Formule 1 moment" class="inline-img" style="max-width:340px; width:100%; float:left; margin:1em 1em 1em 0;">
+            Wat mij drijft is de wil om mezelf elke dag te verbeteren, zowel als persoon als in wat ik doe. Ik geloof dat je met een positieve instelling en doorzettingsvermogen veel kunt bereiken. Samenwerken vind ik belangrijk, want samen kom je verder en leer je van elkaar.<br><br>
+            Mijn doel is om niet alleen te groeien in mijn studie, maar ook als mens. Ik sta altijd open voor nieuwe ervaringen, uitdagingen en ontmoetingen. Wie weet wat de toekomst brengt, maar ik kijk er met veel enthousiasme naar uit!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vaardigheden" class="container">
+      <h2>Vaardigheden</h2>
+      <ul class="skills-list">
+        <li><strong>Creativiteit:</strong> Ik vind het leuk om originele ideeën te bedenken en uit te werken.</li>
+        <li><strong>Doorzettingsvermogen:</strong> Ik geef niet snel op en probeer altijd een oplossing te vinden.</li>
+        <li><strong>Teamwork &amp; communicatie:</strong> Ik werk graag samen en vind het belangrijk om open en duidelijk te communiceren, zodat we samen het beste resultaat bereiken.</li>
       </ul>
-      <h3>Ervaring</h3>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
       <p>
-        Ik heb gewerkt aan verschillende projecten, waaronder websites voor lokale bedrijven en creatieve portfolio's. Mijn focus ligt op het creëren van gebruiksvriendelijke en visueel aantrekkelijke webapplicaties.
+        Wil je meer weten over mij, samenwerken of gewoon even kennismaken? Stuur gerust een berichtje!
       </p>
+      <ul class="contact-list">
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:kay.neggers@student.vonknh.nl">kay.neggers@student.vonknh.nl</a>
+        </li>
+        <!-- Voeg eventueel GitHub of telefoonnummer toe -->
+      </ul>
     </section>
   </main>
 
