@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        height: 100%; /* Zorg ervoor dat de pagina de volledige hoogte van het scherm inneemt */
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Flexbox instellen voor de body */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('backgroundhome.jpg');
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: center; 
+        flex: 1; /* Zorg ervoor dat de inhoud de resterende ruimte inneemt */
+    }
+
+    .products {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .product {
+        width: 500px;
+        padding: 100px;
+        border: 5px solid #000000;
+        cursor: pointer;
+        background-color: #d5028f;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #d5028f;
+        padding: 20px;
+        border: 3px solid black;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        
+        
+    }
+    .close {
+        cursor: pointer;
+        color: red;
+        font-weight: bold;
+    }
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #f81894;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: rgb(0, 0, 0);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #dc0787;
+}
+* {
+box-sizing: border-box;
+}
+
+header {
+background-color:#d0157c;
+padding: 30px;
+text-align: center;
+font-size: 35px;
+color: rgb(0, 0, 0);
+}
+footer {
+    background-color: #f81894;
+    border-top: 1px solid #ddd;
+    padding: 10px; 
+    text-align: center;
+    font-size: 0.9rem; 
+    width: 100%; 
+    margin-top: auto; /* Zorg ervoor dat de footer naar de onderkant van de pagina wordt geduwd */
+}
+
+footer h5, footer h6 {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: grey;
+    margin: 0 3px; 
+    font-size: 0.85rem; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+nav {
+float: left;
+width: 30%;
+height: 300px; 
+background: #ff009d;
+padding: 20px;
+}
+
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+article {
+float: left;
+padding: 20px;
+width: 70%;
+background-color: #9d0f77;
+height: 300px; 
+}
+
+
+section::after {
+content: "";
+display: table;
+clear: both;
+color: #be1672;
+}
+
+
+footer {
+background-color: #be1672;
+padding: 10px;
+text-align: center;
+color: rgb(255, 0, 191);
+}
+
+
+@media (max-width: 600px) {
+nav, article {
+width: 100%;
+height: auto;
+}
+}
+</style>
+</head>
+<body>
+    <ul>
+        <a href="index.html">Home</a>
+        <a href="kies u loodgieter.html">loodgieters</a>
+        <a href="loodgieters store page html.html">Produckt</a>
+        <a href="location loodgieter.html">Locatie</a>   
+      </ul>
+
+
+
+<header>
+  <center>winkel</center>
+</header>
+
+<section>
+    <div class="products">
+        <div class="product" onclick="showPopup('Pipe Wrench', '$25', 'A heavy-duty wrench for gripping and turning pipes.')">Pipe Wrench</div>
+        <div class="product" onclick="showPopup('Plunger', '$10', 'Essential tool for clearing clogs in sinks and toilets.')">Plunger</div>
+        <div class="product" onclick="showPopup('Faucet', '$45', 'High-quality brass faucet with a modern design.')">Faucet</div>
+        <div class="product" onclick="showPopup('Pipe Cutter', '$30', 'Cuts through pipes cleanly and precisely.')">Pipe Cutter</div>
+        <div class="product" onclick="showPopup('Teflon Tape', '$5', 'Prevents leaks in threaded plumbing connections.')">Teflon Tape</div>
+        <div class="product" onclick="showPopup('Drain Snake', '$20', 'Unclogs drains by removing blockages.')">Drain Snake</div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <span class="close" onclick="hidePopup()">X</span>
+        <h2 id="productName"></h2>
+        <p id="productPrice"></p>
+        <p id="productInfo"></p>
+    </div>
+    
+    <script>
+        function showPopup(name, price, info) {
+            document.getElementById('productName').innerText = name;
+            document.getElementById('productPrice').innerText = price;
+            document.getElementById('productInfo').innerText = info;
+            document.getElementById('popup').style.display = 'block';
+        }
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</section>
+
+<footer>
+    <div>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dnl_NL">Facebook</a>
+        <a href="https://x.com/?lang=nl">X</a>
+    </div>
+    <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+  
+</footer>
+
+</body>
+</html>

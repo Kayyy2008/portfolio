@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f81894;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #dc0787;
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Zorg ervoor dat de pagina de volledige hoogte van het scherm inneemt */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Flexbox instellen voor de body */
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('backgroundhome.jpg');
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center; 
+            flex: 1; /* Zorg ervoor dat de inhoud de resterende ruimte inneemt */
+        }
+
+
+header {
+  background-color:#d0157c;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+}
+footer {
+            background-color: #f81894;
+            border-top: 1px solid #ddd;
+            padding: 10px; 
+            text-align: center;
+            font-size: 0.9rem; 
+            width: 100%; 
+            margin-top: auto; /* Zorg ervoor dat de footer naar de onderkant van de pagina wordt geduwd */
+        }
+
+        footer h5, footer h6 {
+            margin: 5px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: grey;
+            margin: 0 3px; 
+            font-size: 0.85rem; 
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; 
+  background: #ff009d;
+  padding: 20px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #9d0f77;
+  height: 300px; 
+}
+
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+  color: #be1672;
+}
+
+
+footer {
+  background-color: #be1672;
+  padding: 10px;
+  text-align: center;
+  color: rgb(255, 0, 191);
+}
+
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+    <ul>
+      <body>
+        <ul>
+          <body>
+            <ul>
+              <a href="index.html">Home</a>
+              <a href="kies u loodgieter.html">loodgieters</a>
+              <a href="loodgieters store page html.html">Produckt</a>
+              <a href="location loodgieter.html">Locatie</a>   
+              </ul>
+      </ul>
+
+
+
+<header>
+  <center>Location</center>
+</header>
+
+<section>
+    <center>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38609.79053412799!2d4.746498959886013!3d52.784290148467676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e52e7aa9ebf1%3A0x6d5ad67ab2b77a18!2sSchagen!5e0!3m2!1snl!2snl!4v1743066817760!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </center>
+</section>
+
+<footer>
+    <div>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dnl_NL">Facebook</a>
+        <a href="https://x.com/?lang=nl">X</a>
+    </div>
+    <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+  
+</footer>
+
+</body>
+</html>

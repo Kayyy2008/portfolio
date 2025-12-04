@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .plumber-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .plumber-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .plumber-info {
+            flex: 1;
+        }
+        .plumber-rating {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .star:hover, .star.selected {
+            color: gold;
+        }
+
+ 
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f81894;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #dc0787;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('backgroundhome.jpg');
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center; 
+}
+
+
+header {
+  background-color:#d0157c;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+}
+footer {
+            background-color: #f81894;
+            border-top: 1px solid #ddd;
+            padding: 10px; 
+            text-align: center;
+            font-size: 0.9rem; 
+            width: 100%; 
+        }
+
+        footer h5, footer h6 {
+            margin: 5px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: grey;
+            margin: 0 3px; 
+            font-size: 0.85rem; 
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; 
+  background: #ff009d;
+  padding: 20px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #9d0f77;
+  height: 300px; 
+}
+
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+  color: #be1672;
+}
+
+
+footer {
+  background-color: #be1672;
+  padding: 10px;
+  text-align: center;
+  color: rgb(255, 0, 191);
+}
+
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+    <ul>
+      <body>
+        <ul>
+          <a href="index.html">Home</a>
+          <a href="kies u loodgieter.html">loodgieters</a>
+          <a href="loodgieters store page html.html">Produckt</a>
+          <a href="location loodgieter.html">Locatie</a>   
+          </ul>
+      </ul>
+
+
+
+<header>
+  <center>kies u loodgieter</center>
+</header>
+
+<section>
+    <div class="plumber-card">
+        <div class="plumber-info">
+            <h2>John Doe</h2>
+            <p><strong>Specialty:</strong> Pipe Repair</p>
+            <p>Experienced in fixing leaks and broken pipes for over 10 years.</p>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <button class="select-btn">Select</button>
+        </div>
+        <div class="plumber-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    <div class="plumber-card">
+        <div class="plumber-info">
+            <h2>kay neggers</h2>
+            <p><strong>Specialty:</strong> wc onstope</p>
+            <p>werkt al 50 jaar als lood gieter en specaliseert is her ondstope.</p>
+            <p><strong>Email:</strong> neggers@gmail.com</p>
+            <button class="select-btn">Select</button>
+        </div>
+        <div class="plumber-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    <div class="plumber-card">
+        <div class="plumber-info">
+            <h2>ed halway</h2>
+            <p><strong>Specialty:</strong> zwaar werk</p>
+            <p>werkt al 5 jaar bij ons en is super sterk.</p>
+            <p><strong>Email:</strong> SpecialEd@gmail.com</p>
+            <button class="select-btn">Select</button>
+        </div>
+        <div class="plumber-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    <div class="plumber-card">
+        <div class="plumber-info">
+            <h2>Heinz Doofenshmirtz</h2>
+            <p><strong>Specialty:</strong> complexen pijpen systemen</p>
+            <p>super goed en kan ales fixe. aleen super bang voor vogelbek diere</p>
+            <p><strong>Email:</strong> plumbinator@gmail.com</p>
+            <button class="select-btn">Select</button>
+        </div>
+        <div class="plumber-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    <div class="plumber-card">
+        <div class="plumber-info">
+            <h2>hans folk</h2>
+            <p><strong>Specialty:</strong> gas pijpen legen</p>
+            <p>werkt al bij ons sinds 1933.</p>
+            <p><strong>Email:</strong> hanshoudnietvansap@gmail.com</p>
+            <button class="select-btn">Select</button>
+        </div>
+        <div class="plumber-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    
+ 
+    
+</section>
+
+<footer>
+    <div>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dnl_NL">Facebook</a>
+        <a href="https://x.com/?lang=nl">X</a>
+    </div>
+    <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+  
+</footer>
+
+</body>
+</html>
