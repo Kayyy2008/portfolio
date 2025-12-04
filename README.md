@@ -14,7 +14,7 @@ kay-neggers-portfolio
 │   ├── cafe
 │   │   └── cafe.html   # Details about the Luxe Café De Markt project
 │   └── heros
-│       └── heros.html  # Details about the Hero's project
+│       └── Bombardero cocodrilo.html  # Details about the Hero's project
 ├── css
 │   └── style.css       # Styles for the portfolio
 ├── js
