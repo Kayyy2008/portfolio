@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Luxe Café De Markt</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Luxe Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 60%, #fffbe6 100%);
+            color: #3e2723;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #a1887f 60%, #d4af37 100%);
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 6px 24px rgba(212,175,55,0.10);
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.2rem;
+            text-shadow: 0 2px 8px rgba(212,175,55,0.10);
+        }
+        header p {
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        nav {
+            background: #6d4c41;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(212,175,55,0.07);
+        }
+        nav a {
+            color: #fffbe6;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+        nav a:hover {
+            color: #d4af37;
+            text-shadow: 0 2px 8px #d4af37;
+        }
+        main {
+            max-width: 950px;
+            margin: 2.5rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(212,175,55,0.10), 0 2px 8px rgba(0,0,0,0.04);
+            padding: 2.5rem 2rem 2rem 2rem;
+            border: 1.5px solid #e0c68a;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #a1887f;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37 60%, #a1887f 100%);
+            border-radius: 2px;
+            margin: 0.5rem 0 0 0;
+        }
+        .menu-section {
+            margin-bottom: 2.5rem;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0.5rem 0.7rem 0;
+            border-bottom: 1px dotted #e0c68a;
+            font-size: 1.13rem;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .menu-list li:last-child {
+            border-bottom: none;
+        }
+        .menu-list li:hover {
+            background: #fffbe6;
+            box-shadow: 0 2px 12px rgba(212,175,55,0.08);
+            border-radius: 8px;
+        }
+        .menu-list span {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .prijs {
+            font-weight: bold;
+            color: #d4af37;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 4px rgba(212,175,55,0.10);
+        }
+        footer {
+            background: linear-gradient(90deg, #a1887f 60%, #d4af37 100%);
+            color: #fffbe6;
+            text-align: center;
+            padding: 1.2rem 0;
+            margin-top: 2.5rem;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            border-top: 1.5px solid #e0c68a;
+            box-shadow: 0 -2px 12px rgba(212,175,55,0.08);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luxe Café De Markt</h1>
+        <p>Menu</p>
+    </header>
+    <nav>
+        <a href="cafe.html">Home</a>
+        <a href="menucafe.html">Menu</a>
+        <a href="overonscafe.html">Over Ons</a>
+        <a href="contactcafe.html">Contact</a>
+        <a href="../index.html">Portfolio</a> 
+    </nav>
+    <main>
+        <section class="menu-section">
+            <h2>Koffie & Thee</h2>
+            <ul class="menu-list">
+                <li><span>Espresso</span> <span class="prijs">€2,50</span></li>
+                <li><span>Cappuccino</span> <span class="prijs">€3,00</span></li>
+                <li><span>Latte Macchiato</span> <span class="prijs">€3,50</span></li>
+                <li><span>Verse munt thee</span> <span class="prijs">€3,00</span></li>
+                <li><span>Chai Latte</span> <span class="prijs">€3,75</span></li>
+            </ul>
+        </section>
+        <section class="menu-section">
+            <h2>Gebak & Zoet</h2>
+            <ul class="menu-list">
+                <li><span>Red velvet taart</span> <span class="prijs">€4,00</span></li>
+                <li><span>Cheesecake</span> <span class="prijs">€4,00</span></li>
+                <li><span>Macarons (3 stuks)</span> <span class="prijs">€3,50</span></li>
+                <li><span>Appeltaart</span> <span class="prijs">€3,75</span></li>
+                <li><span>Brownie</span> <span class="prijs">€3,25</span></li>
+            </ul>
+        </section>
+        <section class="menu-section">
+            <h2>Lunchgerechten</h2>
+            <ul class="menu-list">
+                <li><span>Club sandwich kip</span> <span class="prijs">€8,50</span></li>
+                <li><span>Quiche van de dag</span> <span class="prijs">€7,50</span></li>
+                <li><span>Salade geitenkaas</span> <span class="prijs">€9,00</span></li>
+                <li><span>Soep van de dag</span> <span class="prijs">€5,50</span></li>
+            </ul>
+        </section>
+        <section class="menu-section">
+            <h2>Dranken</h2>
+            <ul class="menu-list">
+                <li><span>Verse jus d’orange</span> <span class="prijs">€3,50</span></li>
+                <li><span>Huisgemaakte limonade</span> <span class="prijs">€3,25</span></li>
+                <li><span>Witte wijn (glas)</span> <span class="prijs">€4,50</span></li>
+                <li><span>Rode wijn (glas)</span> <span class="prijs">€4,50</span></li>
+                <li><span>Speciaalbier</span> <span class="prijs">€5,00</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Luxe Café De Markt &mdash; Marktplein 1, Amsterdam
+    </footer>
+</body>
+</html>

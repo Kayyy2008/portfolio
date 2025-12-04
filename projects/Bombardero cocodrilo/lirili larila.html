@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bombardero Cocodrilo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .navbar {
+            background: #22223b !important;
+        }
+        .navbar-brand, .nav-link, footer {
+            color: #f2e9e4 !important;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #c9ada7 !important;
+        }
+        .hero-img {
+            box-shadow: 0 6px 32px rgba(34,34,59,0.18);
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+            border: 4px solid #c9ada7;
+            max-width: 400px;
+        }
+        .section-title {
+            font-weight: 700;
+            color: #22223b;
+            letter-spacing: 1px;
+        }
+        .btn-custom {
+            background: #9a8c98;
+            color: #fff;
+            border-radius: 2rem;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-custom:hover {
+            background: #4a4e69;
+            color: #fff;
+        }
+        a.link-primary {
+            color: #4a4e69 !important;
+        }
+        a.link-primary:hover {
+            color: #9a8c98 !important;
+        }
+        footer {
+            background: #22223b !important;
+            color: #f2e9e4 !important;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigatiebalk -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mijn Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Hero's.html">Hero's</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Afbeelding met Overlay -->
+    <header>
+        <div style="position:relative;">
+            <img src="./lirili larila.png" class="img-fluid rounded hero-img" alt="Hero afbeelding">
+            <div class="overlay">Bombardero Cocodrilo</div>
+        </div>
+    </header>
+
+    <!-- Tekstgedeelte -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2 class="section-title">Over Ons</h2>
+                <a class="btn-custom d-inline-block mb-2" href="https://www.tiktok.com/@capybarawt/video/7469777811696405782" target="_blank">Bekijk onze video over Bombardero Cocodrilo</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h2 class="section-title">Andere Hero's</h2>
+                <a class="btn-custom d-inline-block mb-2" href="./tralalero tralala.html">Tralalero Tralala</a><br>
+                <a class="btn-custom d-inline-block" href="./Bombardero cocodrilo.html">Bombardero Cocodrilo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <!-- Bootstrap JS en popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

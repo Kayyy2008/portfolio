@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Café De Markt</title>
+    <title>Over Ons | Luxe Café De Markt</title>
     <link rel="stylesheet" href="styles/style.css">
     <!-- Luxe Google Font -->
     <link href="https://static.vecteezy.com/system/resources/previews/000/627/016/original/coffee-cup-logo-template-vector-icon.jpg" rel="stylesheet">
@@ -52,38 +52,6 @@
             color: #d4af37;
             text-shadow: 0 2px 8px #d4af37;
         }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: #fffbe6;
-            padding: 7rem 2rem 6rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid #e0c68a;
-            box-shadow: 0 8px 32px rgba(212,175,55,0.10);
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #d4af37 60%, #a1887f 100%);
-            border-radius: 2px;
-            margin-top: 1rem;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.2rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 12px #a1887f, 0 2px 8px #d4af37;
-        }
-        .hero p {
-            font-size: 1.6rem;
-            text-shadow: 0 2px 8px #a1887f;
-        }
         main {
             max-width: 950px;
             margin: 2.5rem auto;
@@ -109,13 +77,55 @@
             border-radius: 2px;
             margin: 0.5rem 0 0 0;
         }
-        ul {
-            font-size: 1.13rem;
-            margin-bottom: 2rem;
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
         }
-        li {
-            margin-bottom: 0.7rem;
-            padding-left: 0.5rem;
+        .team-member {
+            flex: 1 1 220px;
+            max-width: 220px;
+            background: #fffbe6;
+            border-radius: 14px;
+            padding: 1.2rem 1rem 1.3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(212,175,55,0.08);
+            border: 1.5px solid #e0c68a;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .team-member:hover {
+            box-shadow: 0 8px 32px rgba(212,175,55,0.13);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #d4af37;
+            box-shadow: 0 2px 8px rgba(212,175,55,0.10);
+        }
+        .team-member h3 {
+            margin: 0.5rem 0 0.2rem 0;
+            font-size: 1.2rem;
+            color: #a1887f;
+            font-family: 'Playfair Display', serif;
+        }
+        .team-member p {
+            font-size: 0.98rem;
+            color: #6d4c41;
+        }
+        .cafe-photo {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 16px;
+            margin: 2rem auto 0 auto;
+            display: block;
+            box-shadow: 0 4px 16px rgba(212,175,55,0.10);
+            border: 1.5px solid #e0c68a;
         }
         footer {
             background: linear-gradient(90deg, #a1887f 60%, #d4af37 100%);
@@ -133,7 +143,7 @@
 <body>
     <header>
         <h1>Luxe Café De Markt</h1>
-        <p>Geniet van de beste koffie, gebak en sfeer in het hart van de stad</p>
+        <p>Over Ons</p>
     </header>
     <nav>
         <a href="cafe.html">Home</a>
@@ -141,27 +151,35 @@
         <a href="overonscafe.html">Over Ons</a>
         <a href="contactcafe.html">Contact</a>
         <a href="../index.html">Portfolio</a> 
+
     </nav>
-    <section class="hero">
-        <h1>Welkom bij Luxe Café De Markt</h1>
-        <p>Een unieke ervaring van smaak, luxe en gezelligheid</p>
-    </section>
     <main>
-        <h2>Onze Specialiteiten</h2>
-        <ul>
-            <li>Versgemalen koffiebonen uit de hele wereld</li>
-            <li>Ambachtelijk gebak en patisserie</li>
-            <li>Heerlijke lunchgerechten en borrelhapjes</li>
-            <li>Exclusieve wijnen en cocktails</li>
-        </ul>
-        <h2>Openingstijden</h2>
+        <h2>Onze Passie voor Koffie & Gastvrijheid</h2>
         <p>
-            Maandag t/m Vrijdag: 08:00 - 20:00<br>
-            Zaterdag & Zondag: 09:00 - 22:00
+            Luxe Café De Markt is sinds 2010 een begrip in het hart van Amsterdam. Wij geloven in kwaliteit, gezelligheid en persoonlijke aandacht. 
+            Ons team staat elke dag klaar om jou te laten genieten van de beste koffie, huisgemaakt gebak en een warme sfeer.
         </p>
+        <img class="cafe-photo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Café interieur">
+        <h2>Ons Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Barista Jan">
+                <h3>Jan</h3>
+                <p>Hoofd Barista<br>Specialist in latte art en koffiesmaken.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Gastvrouw Lisa">
+                <h3>Lisa</h3>
+                <p>Gastvrouw<br>Altijd een glimlach en oog voor detail.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Patissier Mark">
+                <h3>Mark</h3>
+                <p>Patissier<br>Maakt dagelijks vers gebak en zoetigheden.</p>
+            </div>
+        </div>
     </main>
     <footer>
         &copy; 2025 Luxe Café De Markt &mdash; Marktplein 1, Amsterdam
     </footer>
 </body>
-</html>
