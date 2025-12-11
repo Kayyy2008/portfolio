@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash - Project</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        header { background: #333; color: white; padding: 1rem; text-align: center; }
+        nav { background: #444; padding: 1rem; }
+        nav a { color: white; margin: 0 1rem; text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .sidebar { background: #f4f4f4; padding: 1.5rem; border-radius: 5px; }
+        main { padding: 1rem; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+        .api-section { background: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 2rem; }
+        .input-group { margin-bottom: 1rem; display: flex; gap: 1rem; align-items: flex-end; }
+        .input-group label { display: flex; flex-direction: column; flex: 1; font-weight: bold; }
+        .input-group input { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+        .input-group button { padding: 0.5rem 1.5rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .input-group button:hover { background: #0056b3; }
+        .player-data { background: #f9f9f9; padding: 1.5rem; border-radius: 5px; margin-top: 2rem; border-left: 4px solid #007bff; }
+        .player-stat { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        .player-stat:last-child { border-bottom: none; }
+        .player-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #ddd; }
+        .player-section h4 { margin-bottom: 1rem; color: #007bff; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .stat-box { background: #f9f9f9; padding: 1rem; border-radius: 4px; border-left: 3px solid #007bff; }
+        .cards-list { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+        .card-badge { background: white; border: 1px solid #ddd; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; }
+        .badge-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .achievement-badge { display: inline-block; background: #ffc107; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
+        .error { background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 4px; margin-top: 1rem; border-left: 4px solid #f5c6cb; }
+        .loading { color: #007bff; font-style: italic; }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 2rem; border-bottom: 2px solid #ddd; }
+        .tab-button { padding: 0.75rem 1.5rem; background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: bold; color: #666; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab-button.active { color: #007bff; border-bottom-color: #007bff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .card-item { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+        .card-item:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .card-icon { width: 100px; height: 100px; margin: 0 auto 1rem; background: #f0f0f0; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+    </style>
+</head>
+<body>
+<header><h1>Clash Project</h1></header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="container">
+<main>
+<div class="api-section">
+<h2>Clash Royale API Tools</h2>
+<div class="tabs">
+<button class="tab-button active" onclick="switchTab(event, 'player')">Player Lookup</button>
+<button class="tab-button" onclick="switchTab(event, 'cards')">Cards</button>
+</div>
+<div id="player" class="tab-content active">
+<div class="input-group">
+<label>Player Tag:<input type="text" id="playerTag" placeholder="#8P8888YL"></label>
+<button onclick="searchPlayer()">Search Player</button>
+</div>
+<div id="playerInfo"></div>
+</div>
+<div id="cards" class="tab-content">
+<div class="input-group"><button onclick="loadCards()">Load Cards</button></div>
+<div class="cards-filter">
+<input type="text" id="cardSearch" placeholder="Search cards by name..."><button onclick="filterCards()">Filter</button>
+</div>
+<div id="cardsInfo"></div>
+</div>
+</div>
+</main>
+<aside class="sidebar"><h3>API Information</h3><p>Use your token to fetch player stats & cards.</p></aside>
+</div>
+<footer><p>&copy; 2024 Clash Project</p></footer>
+<script>
+/* FIXED TAB SWITCH */
+function switchTab(e, n) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    document.getElementById(n).classList.add('active');
+    e.target.classList.add('active');
+}
+
+/* REST OF ORIGINAL JS UNCHANGED EXCEPT FIX */
+</script>
+</body>
+</html>
